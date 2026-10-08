@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta — Sites para artistas</title>
+  <meta name="description" content="Proposta de serviços: Site Museu, Biosite ou os dois juntos. Preço fechado e entrega rápida.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🖼️%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== TOPO: formato de carta (De → Para) ===================== -->
+  <header class="topo">
+    <div class="carta">
+      <div class="de-para">
+        <span class="papel">De:</span>
+        <img class="foto-mini" id="foto-de" alt="Foto de quem envia">
+        <span class="nome-mini" id="nome-de"></span>
+      </div>
+      <span class="carta-seta" aria-hidden="true">→</span>
+      <div class="de-para">
+        <span class="papel">Para:</span>
+        <img class="foto-mini" id="foto-para" alt="Foto de quem recebe">
+        <span class="nome-mini" id="nome-para"></span>
+      </div>
+    </div>
+    <div class="contatos">
+      <a id="btn-zap" class="icone-btn zap" target="_blank" rel="noopener" title="Chamar no WhatsApp" aria-label="Chamar no WhatsApp"></a>
+      <a id="btn-insta" class="icone-btn" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PLANOS ===================== -->
+    <section class="planos">
+      <div class="container">
+        <header class="secao-cabeca">
+          <h2 class="headline">Feito para <em>você</em>, <span class="nome-cliente" id="cliente-nome"></span></h2>
+        </header>
+        <div class="grade-planos" id="grade-planos"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PREVIEW (site do plano aberto aqui dentro) ===================== -->
+  <div id="preview" class="preview" hidden>
+    <div class="preview-barra">
+      <span class="preview-info">
+        <strong id="preview-nome"></strong>
+        <small id="preview-ctx" hidden>parte do Combo</small>
+      </span>
+      <span class="preview-acoes">
+        <button class="icone-btn fechar" data-fechar title="Fechar preview (Esc)" aria-label="Fechar preview">✕</button>
+      </span>
+    </div>
+    <iframe id="preview-frame" title="Pré-visualização do site"></iframe>
+  </div>
+
+  <!-- ===================== POPUP: proposta comercial (valor + WhatsApp) ===================== -->
+  <div id="popup" class="popup" hidden>
+    <div class="popup-fundo" data-fechar-popup></div>
+    <div class="popup-caixa" role="dialog" aria-modal="true" aria-label="Proposta comercial">
+      <button class="icone-btn fechar popup-fechar" data-fechar-popup title="Fechar (Esc)" aria-label="Fechar">✕</button>
+      <div id="popup-conteudo"><!-- preenchido pelo JS --></div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

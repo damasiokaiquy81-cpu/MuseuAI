@@ -1,0 +1,13 @@
+# ============================================
+# Só a PROPOSTA COMERCIAL sobe por enquanto.
+# Quando sair a venda, apague a linha do projeto
+# vendido aqui embaixo e suba tudo pelo GitHub Desktop.
+# ============================================
+modelos/
+clientes/
+servidor.js
+README.md
+
+# sistema
+Thumbs.db
+.DS_Store
