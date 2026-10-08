@@ -1,24 +1,25 @@
 /* ============================================================
-   MUSEUAI — BIOSITE
-   Mesma identidade do site principal: tema "galeria noturna",
-   Playfair Display + Inter, moldura de quadro no avatar e
-   placas de museu — em formato de página de links (linktree).
+   BIOSITE — NÁGILA BORGES ARTE (paleta clara do portfólio)
+   ------------------------------------------------------------
+   Mesma paleta do PDF/portfólio: fundo creme #EEE9E3, tinta
+   quase-preta, neutros quentes — minimalista e clean.
+   Playfair Display + Inter, moldura de quadro no avatar.
    ============================================================ */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #141110;
-  --bg2: #1b1713;
-  --painel: #211c16;
-  --linha: #393127;
-  --texto: #f3eee4;
-  --suave: #b9afa0;
-  --mudo: #8b8172;
-  --ouro: #d3aa5f;
-  --ouro2: #f0d29b;
-  --ouro-escuro: #8a6a3a;
-  --verde: #3ddc6f;
+  --bg: #EEE9E3;          /* creme igual ao fundo do portfólio */
+  --bg2: #F4F1EA;
+  --painel: #FFFFFF;
+  --linha: #DED6C7;
+  --linha-forte: #C9BFAE;
+  --texto: #1C1917;       /* tinta quase-preta (texto do PDF) */
+  --suave: #6E655A;
+  --mudo: #9A9083;
+  --tinta: #26211A;       /* botões primários (tinta escura) */
+  --bronze: #8A7455;      /* detalhes mornos da paleta */
+  --verde: #3A9A5B;
   --serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -33,38 +34,38 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
-::selection { background: rgba(211, 170, 95, .35); }
+::selection { background: rgba(138, 116, 85, .25); }
 
-/* luzes de fundo (holofotes do museu) */
+/* luz de fundo bem sutil (sensação de papel) */
 .luz {
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background:
-    radial-gradient(480px 320px at 70% 0%, rgba(211, 170, 95, .16), transparent 70%),
-    radial-gradient(560px 420px at 12% 100%, rgba(122, 62, 42, .16), transparent 72%),
-    radial-gradient(900px 700px at 50% 50%, rgba(20, 17, 16, 0), var(--bg2) 130%);
+    radial-gradient(520px 360px at 72% -5%, rgba(255, 255, 255, .75), transparent 70%),
+    radial-gradient(640px 480px at 10% 105%, rgba(216, 196, 163, .35), transparent 72%);
 }
 
 /* ---------------- moldura do avatar ---------------- */
 .moldura {
-  background: linear-gradient(135deg, #7d6036, #2c2213 28%, #94733f 52%, #1f1708 100%);
-  padding: 11px; border-radius: 8px;
-  box-shadow: 0 26px 60px -22px rgba(0, 0, 0, .9), inset 0 0 0 1px rgba(255, 220, 150, .14);
+  background: linear-gradient(135deg, #FFFFFF, #F3EFE7 55%, #E7DFD2);
+  padding: 10px; border-radius: 8px;
+  border: 1px solid var(--linha);
+  box-shadow: 0 22px 48px -22px rgba(60, 50, 35, .38);
 }
-.passpartout { background: #eae0cd; padding: 9px; border-radius: 3px; }
-.passpartout img { box-shadow: 0 6px 16px rgba(0, 0, 0, .4); }
+.passpartout { background: #FFFFFF; padding: 9px; border-radius: 3px; border: 1px solid #ECE5D9; }
+.passpartout img { box-shadow: 0 6px 16px -8px rgba(60, 50, 35, .45); }
 
 .avatar { width: 158px; transform: rotate(-1.6deg); transition: transform .35s; }
 .avatar:hover { transform: rotate(0deg) scale(1.02); }
 .avatar .passpartout img { aspect-ratio: 1 / 1.08; object-fit: cover; }
 
-/* placa de museu */
+/* plaquinha do @ */
 .placa {
-  background: linear-gradient(180deg, #2c261c, #1f1a12);
-  border: 1px solid #3d3426; border-radius: 5px;
+  background: var(--painel);
+  border: 1px solid var(--linha); border-radius: 6px;
   text-align: center; padding: 8px 16px;
 }
 .placa span { font: 400 12px var(--sans); color: var(--mudo); }
-.placa strong { font: 600 14px var(--serif); color: var(--ouro2); letter-spacing: .04em; }
+.placa strong { font: 600 14px var(--serif); color: var(--bronze); letter-spacing: .04em; }
 
 /* ---------------- layout ---------------- */
 .bio {
@@ -78,10 +79,10 @@ img { max-width: 100%; display: block; }
 }
 .handle {
   cursor: pointer; color: inherit;
-  font: 600 14px var(--sans); letter-spacing: .06em; color: var(--ouro2);
+  font: 600 14px var(--sans); letter-spacing: .06em; color: var(--bronze);
   transition: transform .2s, border-color .2s;
 }
-.handle:hover { transform: translateY(-2px); border-color: var(--ouro-escuro); }
+.handle:hover { transform: translateY(-2px); border-color: var(--bronze); }
 
 h1 { font: 600 clamp(30px, 6vw, 38px)/1.15 var(--serif); margin-top: 26px; animation: surgir .6s .1s ease backwards; }
 .frase { color: var(--suave); font-size: 15.5px; margin-top: 10px; max-width: 40ch; animation: surgir .6s .18s ease backwards; }
@@ -89,18 +90,18 @@ h1 { font: 600 clamp(30px, 6vw, 38px)/1.15 var(--serif); margin-top: 26px; anima
 .status {
   display: inline-flex; align-items: center; gap: 9px;
   margin-top: 18px; padding: 8px 18px; border-radius: 999px;
-  background: rgba(61, 220, 111, .09); border: 1px solid rgba(61, 220, 111, .3);
-  color: #8be8ab; font: 600 13px var(--sans); letter-spacing: .04em;
+  background: var(--painel); border: 1px solid var(--linha);
+  color: var(--suave); font: 600 13px var(--sans); letter-spacing: .04em;
   animation: surgir .6s .26s ease backwards;
 }
 .ponto {
   width: 8px; height: 8px; border-radius: 50%; background: var(--verde);
-  box-shadow: 0 0 0 0 rgba(61, 220, 111, .5); animation: pulso 2.2s infinite;
+  box-shadow: 0 0 0 0 rgba(58, 154, 91, .5); animation: pulso 2.2s infinite;
 }
 @keyframes pulso {
-  0% { box-shadow: 0 0 0 0 rgba(61, 220, 111, .5); }
-  70% { box-shadow: 0 0 0 9px rgba(61, 220, 111, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(61, 220, 111, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(58, 154, 91, .5); }
+  70% { box-shadow: 0 0 0 9px rgba(58, 154, 91, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(58, 154, 91, 0); }
 }
 
 /* ---------------- botões de link ---------------- */
@@ -109,31 +110,25 @@ h1 { font: 600 clamp(30px, 6vw, 38px)/1.15 var(--serif); margin-top: 26px; anima
 .link {
   display: flex; align-items: center; gap: 14px;
   padding: 14px 16px; border-radius: 14px;
-  background: linear-gradient(180deg, #241f18, #1c1813);
+  background: var(--painel);
   border: 1px solid var(--linha);
   color: var(--texto); text-decoration: none;
   animation: surgir .55s ease backwards;
   transition: transform .22s, border-color .22s, box-shadow .22s, background .22s;
   position: relative; overflow: hidden;
 }
-.link::after {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(220px 90px at 90% -20%, rgba(211, 170, 95, .12), transparent);
-  opacity: 0; transition: opacity .25s; pointer-events: none;
-}
 .link:hover {
   transform: translateY(-3px);
-  border-color: var(--ouro-escuro);
-  box-shadow: 0 16px 36px -16px rgba(0, 0, 0, .85);
+  border-color: var(--linha-forte);
+  box-shadow: 0 18px 38px -18px rgba(60, 50, 35, .38);
 }
-.link:hover::after { opacity: 1; }
-.link:hover .seta { transform: translateX(4px); color: var(--ouro2); }
+.link:hover .seta { transform: translateX(4px); color: var(--tinta); }
 
 .icone {
-  flex: 0 0 auto; width: 42px; height: 42px; border-radius: 12px;
+  flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%;
   display: grid; place-items: center;
-  background: rgba(211, 170, 95, .1); color: var(--ouro2);
-  border: 1px solid rgba(211, 170, 95, .22);
+  background: #F3EFE7; color: var(--bronze);
+  border: 1px solid var(--linha);
 }
 .textos { display: grid; text-align: left; gap: 1px; min-width: 0; }
 .textos strong { font: 600 15px var(--sans); letter-spacing: .01em; }
@@ -141,20 +136,20 @@ h1 { font: 600 clamp(30px, 6vw, 38px)/1.15 var(--serif); margin-top: 26px; anima
 
 .seta { margin-left: auto; color: var(--mudo); font-size: 18px; transition: transform .2s, color .2s; }
 
-/* botão do WhatsApp (verde) */
-.link.whatsapp { border-color: rgba(61, 220, 111, .35); background: linear-gradient(180deg, rgba(61, 220, 111, .09), #1c1813 60%); }
-.link.whatsapp .icone { background: rgba(61, 220, 111, .12); color: var(--verde); border-color: rgba(61, 220, 111, .3); }
+/* botão do WhatsApp (verde discreto) */
+.link.whatsapp { border-color: rgba(58, 154, 91, .38); }
+.link.whatsapp .icone { background: rgba(58, 154, 91, .1); color: var(--verde); border-color: rgba(58, 154, 91, .3); }
 
-/* botão em destaque (dourado) */
+/* botão em destaque (tinta escura) */
 .link.destaque {
-  background: linear-gradient(180deg, #e8c37e, #c99a4e);
-  border-color: transparent; color: #241705;
-  box-shadow: 0 14px 34px -14px rgba(201, 154, 78, .6);
+  background: var(--tinta);
+  border-color: var(--tinta); color: #F5F1E8;
+  box-shadow: 0 16px 36px -16px rgba(38, 33, 26, .65);
 }
-.link.destaque .icone { background: rgba(36, 23, 5, .1); color: #241705; border-color: rgba(36, 23, 5, .2); }
-.link.destaque .textos small { color: rgba(36, 23, 5, .62); }
-.link.destaque .seta { color: rgba(36, 23, 5, .65); }
-.link.destaque:hover { filter: brightness(1.05); }
+.link.destaque .icone { background: rgba(245, 241, 232, .12); color: #F5F1E8; border-color: rgba(245, 241, 232, .25); }
+.link.destaque .textos small { color: rgba(245, 241, 232, .68); }
+.link.destaque .seta { color: rgba(245, 241, 232, .75); }
+.link.destaque:hover { background: #171310; border-color: #171310; }
 
 /* ---------------- rodapé ---------------- */
 .bio-rodape {
@@ -164,21 +159,21 @@ h1 { font: 600 clamp(30px, 6vw, 38px)/1.15 var(--serif); margin-top: 26px; anima
 }
 .btn-mini {
   padding: 9px 18px; border-radius: 999px;
-  background: rgba(211, 170, 95, .07); border: 1px solid #54482f;
-  color: var(--ouro2); font: 600 13px var(--sans); cursor: pointer;
-  transition: transform .2s, background .2s;
+  background: var(--painel); border: 1px solid var(--linha);
+  color: var(--suave); font: 600 13px var(--sans); cursor: pointer;
+  transition: transform .2s, border-color .2s, color .2s;
 }
-.btn-mini:hover { transform: translateY(-2px); background: rgba(211, 170, 95, .14); }
+.btn-mini:hover { transform: translateY(-2px); border-color: var(--linha-forte); color: var(--texto); }
 
 /* ---------------- toast ---------------- */
 #toast {
   position: fixed; left: 50%; bottom: 26px; z-index: 100;
   transform: translateX(-50%) translateY(16px); opacity: 0; pointer-events: none;
-  background: #2a2318; border: 1px solid var(--ouro); color: var(--texto);
+  background: var(--tinta); border: 1px solid #3B342A; color: #F5F1E8;
   padding: 12px 22px; border-radius: 999px;
   font: 500 14.5px var(--sans); white-space: nowrap; max-width: 92vw; overflow: hidden; text-overflow: ellipsis;
   transition: opacity .35s, transform .35s;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, .5);
+  box-shadow: 0 18px 44px -14px rgba(38, 33, 26, .55);
 }
 #toast.mostrar { opacity: 1; transform: translateX(-50%) translateY(0); }
 

@@ -1,10 +1,13 @@
 # ============================================
-# Sites dos clientes ficam escondidos até a venda.
-# (modelos/ e o resto SUBEM — os previews da proposta
-#  dependem deles pra funcionar na Vercel)
-# Quando a venda fechar, apague a linha de baixo.
+# Sobe: proposta padrão + PROJETOS DA NÁGILA
+# (a proposta dela precisa dos projetos dela nos previews)
+#
+# Fora: modelos/ e os sites dos outros clientes —
+# quando a venda fechar, apague a linha de baixo.
 # ============================================
-clientes/
+modelos/
+clientes/*
+!clientes/nagila-borges-arte/
 
 # sistema
 Thumbs.db
