@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1d4e"/>
+      <stop offset=".45" stop-color="#7a3f6d"/>
+      <stop offset=".75" stop-color="#e08e6d"/>
+      <stop offset="1" stop-color="#f5c68a"/>
+    </linearGradient>
+    <radialGradient id="sol" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff3d6"/>
+      <stop offset=".55" stop-color="#ffce7e"/>
+      <stop offset="1" stop-color="#ffce7e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#ceu)"/>
+  <circle cx="400" cy="560" r="170" fill="url(#sol)"/>
+  <circle cx="400" cy="560" r="74" fill="#ffe9b8"/>
+  <path d="M0 720 L180 560 L330 720 L470 600 L640 760 L800 640 L800 1000 L0 1000 Z" fill="#3a2537"/>
+  <path d="M0 800 L160 690 L340 830 L560 700 L800 830 L800 1000 L0 1000 Z" fill="#221627"/>
+  <path d="M0 880 L220 790 L430 900 L650 810 L800 885 L800 1000 L0 1000 Z" fill="#120c15"/>
+  <ellipse cx="400" cy="955" rx="340" ry="28" fill="#ffce7e" opacity=".12"/>
+</svg>

@@ -1,12 +1,10 @@
 # ============================================
-# Só a PROPOSTA COMERCIAL sobe por enquanto.
-# Quando sair a venda, apague a linha do projeto
-# vendido aqui embaixo e suba tudo pelo GitHub Desktop.
+# Sites dos clientes ficam escondidos até a venda.
+# (modelos/ e o resto SUBEM — os previews da proposta
+#  dependem deles pra funcionar na Vercel)
+# Quando a venda fechar, apague a linha de baixo.
 # ============================================
-modelos/
 clientes/
-servidor.js
-README.md
 
 # sistema
 Thumbs.db

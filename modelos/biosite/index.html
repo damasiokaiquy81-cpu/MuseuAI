@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links — MuseuAI</title>
+  <meta name="description" content="Todos os meus links em um só lugar: galeria, WhatsApp, redes sociais e orçamentos.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🖼️%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="luz" aria-hidden="true"></div>
+
+  <main class="bio">
+    <!-- Avatar emoldurado como quadro -->
+    <header class="bio-topo">
+      <div class="moldura avatar">
+        <div class="passpartout"><img id="foto" alt="Foto do artista"></div>
+      </div>
+      <button class="placa handle" id="handle" title="Clique para copiar o link desta página"></button>
+    </header>
+
+    <h1 id="nome">…</h1>
+    <p class="frase" id="frase"></p>
+    <p class="status" id="status"><span class="ponto" aria-hidden="true"></span><span id="status-texto"></span></p>
+
+    <!-- Botões de links -->
+    <nav class="links" id="links" aria-label="Meus links"></nav>
+
+    <footer class="bio-rodape">
+      <button id="compartilhar" class="btn-mini">🔗 Copiar link desta página</button>
+      <p>Feito com 🖼️ e carinho · <span id="marca">MuseuAI</span> · <span id="ano"></span></p>
+    </footer>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

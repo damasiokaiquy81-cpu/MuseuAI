@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MuseuAI — Galeria de Arte</title>
+  <meta name="description" content="Galeria online em formato de museu: veja as obras, peça orçamento pelo WhatsApp e avalie suas favoritas.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🖼️%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== TOPO / MENU ===================== -->
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Voltar ao início">Museu<em>AI</em></a>
+    <nav class="topo-nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a id="topo-wa" class="btn btn-verde btn-pequeno" target="_blank" rel="noopener">WhatsApp</a>
+  </header>
+
+  <main>
+    <!-- ===================== HERO / QUEM SOU EU ===================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-luz" aria-hidden="true"></div>
+      <div class="hero-grid container">
+        <div class="hero-texto">
+          <p class="overline">Galeria virtual · MuseuAI</p>
+          <h1>Olá! Eu sou <em id="artista-nome">…</em></h1>
+          <p class="hero-funcao" id="artista-funcao"></p>
+          <p class="bio" id="artista-bio"></p>
+          <div class="hero-acoes">
+            <a href="#galeria" class="btn btn-ouro">Explorar a galeria</a>
+            <a id="hero-wa" class="btn btn-verde" target="_blank" rel="noopener"></a>
+          </div>
+          <!-- Média geral das avaliações -->
+          <div class="hero-stats" id="hero-stats" aria-live="polite"></div>
+        </div>
+        <div class="hero-retrato">
+          <div class="moldura moldura-retrato">
+            <div class="passpartout"><img id="artista-foto" alt="Retrato do artista"></div>
+          </div>
+          <div class="placa placa-simples">
+            <span>“Todo quadro conta uma história — escolha a sua.”</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MAIS BEM AVALIADAS ===================== -->
+    <section id="destaques" class="secao">
+      <div class="container">
+        <header class="secao-cabeca">
+          <p class="overline">Exposição permanente</p>
+          <h2>Mais bem avaliadas</h2>
+          <p class="sub" id="destaques-sub">…</p>
+        </header>
+        <div class="grade grade-destaques" id="grade-destaques"></div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERIA COMPLETA (MUSEU) ===================== -->
+    <section id="galeria" class="secao secao-alt">
+      <div class="container">
+        <header class="secao-cabeca">
+          <p class="overline">As salas do museu</p>
+          <h2>Galeria completa</h2>
+          <p class="sub">Clique em uma obra para vê-la de perto, pedir orçamento no WhatsApp e deixar sua avaliação.</p>
+        </header>
+        <div class="grade" id="grade-galeria"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ / CONTATO ===================== -->
+  <footer id="contato" class="rodape">
+    <div class="container">
+      <p class="rodape-frase">Quer uma obra sua na parede?</p>
+      <a id="rodape-wa" class="btn btn-verde" target="_blank" rel="noopener"></a>
+      <p class="rodape-info" id="rodape-info"></p>
+      <p class="rodape-credito"><span id="rodape-marca">MuseuAI</span> · <span id="rodape-ano"></span> · Feito com 🖼️ e carinho</p>
+    </div>
+  </footer>
+
+  <!-- ===================== SALA DO MUSEU (detalhe da obra) ===================== -->
+  <div id="sala" class="sala" hidden>
+    <div class="sala-fundo" data-fechar></div>
+    <div class="sala-caixa" role="dialog" aria-modal="true" aria-label="Detalhe da obra">
+      <button class="sala-fechar" data-fechar aria-label="Fechar (Esc)">✕</button>
+      <div id="sala-conteudo"><!-- preenchido pelo JS --></div>
+    </div>
+  </div>
+
+  <!-- Aviso flutuante -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

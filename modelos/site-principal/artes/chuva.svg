@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3c4653"/>
+      <stop offset="1" stop-color="#6b7787"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#ceu)"/>
+  <g stroke="#d7dee6" stroke-width="3" opacity=".5" stroke-linecap="round">
+    <line x1="90" y1="40" x2="82" y2="200"/>
+    <line x1="170" y1="0" x2="162" y2="150"/>
+    <line x1="250" y1="90" x2="242" y2="260"/>
+    <line x1="340" y1="20" x2="332" y2="180"/>
+    <line x1="440" y1="60" x2="432" y2="240"/>
+    <line x1="530" y1="10" x2="522" y2="170"/>
+    <line x1="620" y1="70" x2="612" y2="230"/>
+    <line x1="710" y1="30" x2="702" y2="200"/>
+    <line x1="130" y1="280" x2="124" y2="380"/>
+    <line x1="600" y1="300" x2="594" y2="400"/>
+    <line x1="690" y1="330" x2="684" y2="430"/>
+    <line x1="60" y1="340" x2="55" y2="420"/>
+  </g>
+  <circle cx="400" cy="480" r="120" fill="#c94f43"/>
+  <path d="M400 480 m -120 0 a 120 120 0 0 1 240 0" fill="#c94f43"/>
+  <path d="M280 480 A 120 120 0 0 1 520 480" fill="none" stroke="#8f3229" stroke-width="5"/>
+  <path d="M400 480 V 700" stroke="#2b3138" stroke-width="10" stroke-linecap="round"/>
+  <path d="M400 700 q 0 30 -30 30" fill="none" stroke="#2b3138" stroke-width="10" stroke-linecap="round"/>
+  <path d="M336 508 A 100 100 0 0 1 400 424" fill="none" stroke="#e0837a" stroke-width="6" opacity=".7"/>
+  <ellipse cx="400" cy="880" rx="330" ry="46" fill="#2b3138" opacity=".55"/>
+  <ellipse cx="400" cy="874" rx="90" ry="14" fill="#c94f43" opacity=".3"/>
+</svg>
